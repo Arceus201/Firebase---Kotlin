@@ -30,12 +30,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             val extras = intent.extras
             if (extras != null) {
                 val value = extras.getString("abc")
-                Log.e("tnentn..............", value.toString())
-            } else {
-                Log.e("tnentn..............", "Extras are null")
+                if(value == "abccccccccccccccccccccc"){
+                    showHideFragment(fragment4)
+                }
             }
-        } else {
-            Log.e("tnentn..............", "Intent is null")
         }
     }
 
@@ -55,7 +53,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     }
 
     private fun initFragment() {
-        Log.e("init Fragment:", "init")
         var count: Int = 0
         for (fragment in fragmentList) {
             addFragment(fragment, tagList.get(count++))

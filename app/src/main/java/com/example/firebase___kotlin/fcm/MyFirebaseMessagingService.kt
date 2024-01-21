@@ -1,5 +1,6 @@
 package com.example.firebase___kotlin.fcm
 
+import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -26,26 +27,14 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         sendNotification(strTitle ?: "strTitle", strMessage ?: "strMessage")
     }
 
+    @SuppressLint("LaunchActivityFromNotification")
     private fun sendNotification(strTitle: String, strMessage: String) {
         val intent = Intent("OPEN_ACTIVITY_FROM_NOTIFICATION")
         intent.putExtra("abc","abc")
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-
-//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//        val stackBuilder = TaskStackBuilder.create(this)
-
-// Add the intent, which inflates the back stack.
-//        stackBuilder.addNextIntentWithParentStack(intent)
-
-// Get the PendingIntent containing the entire back stack.
-//        val pendingIntent: PendingIntent? = stackBuilder.getPendingIntent(
-//            0,
-//            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-//        )
         val pendingIntent =
-            PendingIntent.getBroadcast(
+            getBroadcast(
                 this, 0, intent,
-                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_ONE_SHOT
             )
 
         val notificationBuilder = NotificationCompat.Builder(this, MyApplication.CHANNEL_ID)
