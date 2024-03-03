@@ -9,7 +9,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.firebase___kotlin.databinding.ActivityMainBinding
 import com.example.movies.utlis.base.BaseActivity
-import com.example.test.screen.tab1.Tab1Fragment
+import com.example.firebase___kotlin.tab1.Tab1Fragment
 import com.example.test.screen.tab2.Tab2Fragment
 import com.example.test.screen.tab3.Tab3Fragment
 import com.example.test.screen.tab4.Tab4Fragment
@@ -62,17 +62,17 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
     override fun handleEvent() {
         binding.apply {
-            nestedScroll.setOnScrollChangeListener { _, _, scrollY, _, _ ->
-                val threshold = 200
-                // Khi cuộn xuống, ẩn Bottom Navigation
-                if (scrollY > threshold && bottomNavigation.isShown) {
-                    bottomNavigation.visibility = View.GONE
-                }
-                // Khi cuộn lên và NestedScrollView ở đầu trang, hiện Bottom Navigation
-                else if (scrollY <= threshold && !bottomNavigation.isShown) {
-                    bottomNavigation.visibility = View.VISIBLE
-                }
-            }
+//            nestedScroll.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+//                val threshold = 200
+//                // Khi cuộn xuống, ẩn Bottom Navigation
+//                if (scrollY > threshold && bottomNavigation.isShown) {
+//                    bottomNavigation.visibility = View.GONE
+//                }
+//                // Khi cuộn lên và NestedScrollView ở đầu trang, hiện Bottom Navigation
+//                else if (scrollY <= threshold && !bottomNavigation.isShown) {
+//                    bottomNavigation.visibility = View.VISIBLE
+//                }
+//            }
 
             bottomNavigation.setOnNavigationItemSelectedListener { item ->
                 when (item.itemId) {

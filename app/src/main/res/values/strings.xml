@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Firebase---Kotlin</string>
+
+    <string name="text_delete_all">AC</string>
+    <string name="text_back">C</string>
+
+    <string name="text_left_parenthesis">(</string>
+    <string name="text_right_parenthesis">)</string>
+    <string name="text_sin">sin</string>
+    <string name="text_cos">cos</string>
+    <string name="text_tan">tan</string>
+
+    <string name="text_logarithm">log</string>
+    <string name="text_natural_logarithm">ln</string>
+    <string name="text_factorial">x!</string>
+    <string name="text_squareInv">x²</string>
+    <string name="text_square">√</string>
+
+    <string name="text_inverse">1/x</string>
+    <string name="text_zero">0</string>
+    <string name="text_one">1</string>
+    <string name="text_two">2</string>
+    <string name="text_three">3</string>
+    <string name="text_four">4</string>
+    <string name="text_five">5</string>
+    <string name="text_six">6</string>
+    <string name="text_seven">7</string>
+    <string name="text_eight">8</string>
+    <string name="text_nine">9</string>
+
+    <string name="text_multiplication">x</string>
+    <string name="text_division">÷</string>
+    <string name="text_subtraction">-</string>
+    <string name="text_plus">+</string>
+    <string name="text_equal">=</string>
+    <string name="text_pi">π</string>
 </resources>

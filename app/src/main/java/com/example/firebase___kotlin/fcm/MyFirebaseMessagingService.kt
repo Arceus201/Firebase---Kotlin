@@ -27,7 +27,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         sendNotification(strTitle ?: "strTitle", strMessage ?: "strMessage")
     }
 
-    @SuppressLint("LaunchActivityFromNotification")
+    @SuppressLint("LaunchActivityFromNotification", "UnspecifiedImmutableFlag")
     private fun sendNotification(strTitle: String, strMessage: String) {
         val intent = Intent("OPEN_ACTIVITY_FROM_NOTIFICATION")
         intent.putExtra("abc","abc")
