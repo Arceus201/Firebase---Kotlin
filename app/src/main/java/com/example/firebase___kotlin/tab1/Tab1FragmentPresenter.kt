@@ -103,4 +103,26 @@ class Tab1FragmentPresenter(private val view: Tab1FragmentContract.View) :
         }
         view.onShowResult(result.toString(),inputDisplay)
     }
+
+    private val model = CalculatorModel()
+
+    override fun onNumberClick(number: String) {
+        model.appendInput(number)
+        view.updateInput(model.input)
+    }
+
+    override fun onClearAllClick() {
+        model.clearAll()
+        view.updateInput(model.input)
+    }
+
+    override fun onDeleteClick() {
+        model.deleteLastInput()
+        view.updateInput(model.input)
+    }
+
+    override fun onEvaluateClick() {
+        val result = model.evaluate()
+        view.showResult(result)
+    }
 }
