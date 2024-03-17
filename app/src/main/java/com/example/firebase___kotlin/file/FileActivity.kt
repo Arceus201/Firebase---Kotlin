@@ -5,11 +5,10 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Environment
 import android.util.Log
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.firebase___kotlin.databinding.ActivityFileBinding
-import com.example.movies.utlis.base.BaseActivity
+import com.example.firebase___kotlin.base.BaseActivity
 import java.io.File
 
 class FileActivity : BaseActivity<ActivityFileBinding>(

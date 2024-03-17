@@ -5,10 +5,10 @@ package com.example.firebase___kotlin
 
 import android.content.Intent
 import android.util.Log
-import android.view.View
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import com.example.firebase___kotlin.databinding.ActivityMainBinding
-import com.example.movies.utlis.base.BaseActivity
+import com.example.firebase___kotlin.base.BaseActivity
 import com.example.firebase___kotlin.tab1.Tab1Fragment
 import com.example.test.screen.tab2.Tab2Fragment
 import com.example.test.screen.tab3.Tab3Fragment
@@ -44,6 +44,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     private val fragmentList = listOf(fragment1, fragment2, fragment3, fragment4)
     private val tagList = listOf(TAG_GOOGLE, TAG_STACK_OVER_FLOW, TAG_PERMISSION, TAG_PERSON)
     override fun initView() {
+        installSplashScreen()
         addFragment(Tab1Fragment(), TAG_GOOGLE)
         handleIntent(getIntent())
     }

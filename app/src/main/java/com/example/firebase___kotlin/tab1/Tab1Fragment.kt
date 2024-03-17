@@ -2,7 +2,7 @@ package com.example.firebase___kotlin.tab1
 
 import android.os.Bundle
 import com.example.firebase___kotlin.databinding.FragmentTab1Binding
-import com.example.movies.utlis.base.BaseFragment
+import com.example.firebase___kotlin.base.BaseFragment
 import kotlin.math.*
 
 
@@ -155,6 +155,14 @@ class Tab1Fragment : BaseFragment<FragmentTab1Binding>(
     override fun onShowResult(result: String, input: String) {
         showInput(result)
         showHistory(input)
+    }
+
+    override fun updateInput(input: String) {
+
+    }
+
+    override fun showResult(result: String) {
+
     }
 
 }

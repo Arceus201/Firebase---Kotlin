@@ -3,7 +3,7 @@ package com.example.test.screen.tab3
 import android.os.Bundle
 
 import com.example.firebase___kotlin.databinding.FragmentTab3Binding
-import com.example.movies.utlis.base.BaseFragment
+import com.example.firebase___kotlin.base.BaseFragment
 
 
 class Tab3Fragment : BaseFragment<FragmentTab3Binding>(
