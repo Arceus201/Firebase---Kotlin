@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
+//abc
 abstract class BaseActivity<T : ViewBinding>(
     private val bindingInflater: (inflater: LayoutInflater)->T
 ) : AppCompatActivity(){
