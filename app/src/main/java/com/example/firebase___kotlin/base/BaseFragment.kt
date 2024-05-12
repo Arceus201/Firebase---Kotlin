@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-
+//anc
 abstract class BaseFragment <T : ViewBinding>(
     private val bindingInflater: (inflater: LayoutInflater)->T
 ) : Fragment(){
